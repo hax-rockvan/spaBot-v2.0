@@ -3,17 +3,13 @@ const Discord = require('discord.js');
 const dotenv = require('dotenv');
 dotenv.config();
 const PREFIX = process.env['PREFIX'];
-const TOKEN = process.env['TOKEN'];
+const BOT_TOKEN = process.env['TOKEN'];
 
 const client = new Discord.Client();
 
 client.commands = new Discord.Collection();
 
 const commandFolders = fs.readdirSync('./src/commands');
-
-const commandFiles = fs
-  .readdirSync('./src/commands')
-  .filter((file) => file.endsWith('.js'));
 
 for (const folder of commandFolders) {
   const commandFiles = fs
@@ -53,4 +49,4 @@ client.on('message', (message) => {
   }
 });
 
-client.login(TOKEN);
+client.login(BOT_TOKEN);
