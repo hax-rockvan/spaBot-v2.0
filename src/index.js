@@ -2,7 +2,11 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const dotenv = require('dotenv');
 dotenv.config();
-const prefix = process.env.PREFIX;
+
+
+const prefix = process.env['PREFIX']
+
+const token = process.env['TOKEN']
 
 const client = new Discord.Client();
 
@@ -52,4 +56,4 @@ client.on('message', (message) => {
   }
 });
 
-client.login(process.env.TOKEN);
+client.login(token);
