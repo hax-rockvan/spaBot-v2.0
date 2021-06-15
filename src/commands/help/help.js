@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
   name: 'help',
   description: 'List of All Available Bot Commands',
+
   async execute(message, args) {
     const help = new Discord.MessageEmbed()
       .setColor('#ffff3f')
@@ -34,7 +35,7 @@ module.exports = {
           value: 'Generates a random meme',
         },
         {
-          name: '!multiaccount',
+          name: '!multi',
           value: 'Shows Multi Account Image',
         },
         {
