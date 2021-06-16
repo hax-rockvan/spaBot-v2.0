@@ -1,5 +1,5 @@
-/node_modules/
+node_modules/
 .env
 template.txt
 .replit
-/test/
+test/
