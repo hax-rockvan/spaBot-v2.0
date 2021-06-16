@@ -8,4 +8,4 @@ test/
 template.txt
 .env
 .replit
-
+yarn-error.log
