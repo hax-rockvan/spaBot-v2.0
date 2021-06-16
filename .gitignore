@@ -1,4 +1,11 @@
+
+#Folers
 node_modules/
 test/
+
+
+#files
 template.txt
 .env
+.replit
+

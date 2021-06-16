@@ -2,17 +2,15 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const dotenv = require('dotenv');
 dotenv.config();
-const prefix = process.env.PREFIX;
+const PREFIX = process.env['PREFIX'];
+const BOT_TOKEN = process.env['BOT_TOKEN'];
+const keepAlive = require('server');
 
 const client = new Discord.Client();
 
 client.commands = new Discord.Collection();
 
 const commandFolders = fs.readdirSync('./src/commands');
-
-const commandFiles = fs
-  .readdirSync('./src/commands')
-  .filter((file) => file.endsWith('.js'));
 
 for (const folder of commandFolders) {
   const commandFiles = fs
@@ -25,13 +23,13 @@ for (const folder of commandFolders) {
 }
 
 client.once('ready', () => {
-  console.log('Ready!');
+  console.log('spaBot is Ready!');
 });
 
 client.on('message', (message) => {
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
+  if (!message.content.startsWith(PREFIX) || message.author.bot) return;
 
-  const args = message.content.slice(prefix.length).trim().split(/ +/);
+  const args = message.content.slice(PREFIX.length).trim().split(/ +/);
   const commandName = args.shift().toLowerCase();
 
   if (!client.commands.has(commandName)) return;
@@ -40,7 +38,7 @@ client.on('message', (message) => {
 
   if (command.args && !args.length) {
     return message.channel.send(
-      `You didn't provide any arguments, ${message.author}!`
+      `You didn't provide any command, ${message.author}!`
     );
   }
 
@@ -52,4 +50,5 @@ client.on('message', (message) => {
   }
 });
 
-client.login(process.env.TOKEN);
+keepAlive();
+client.login(process.env.BOT_TOKEN);
