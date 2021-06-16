@@ -8,7 +8,7 @@ module.exports = {
     const reminder = new Discord.MessageEmbed()
       .setColor('#ffff3f')
       .setTitle('Important Reminder')
-      .setDescription('Sexty needs to pay P1,200 to Rockvan');
+      .setDescription('Claim SLP June 19 - 10PM');
 
     message.channel.send(reminder);
   },

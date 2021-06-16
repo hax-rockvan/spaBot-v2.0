@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const PREFIX = process.env['PREFIX'];
 const BOT_TOKEN = process.env['TOKEN'];
+const keepAlive = require('server');
 
 const client = new Discord.Client();
 
@@ -37,7 +38,7 @@ client.on('message', (message) => {
 
   if (command.args && !args.length) {
     return message.channel.send(
-      `You didn't provide any arguments, ${message.author}!`
+      `You didn't provide any command, ${message.author}!`
     );
   }
 
@@ -49,4 +50,5 @@ client.on('message', (message) => {
   }
 });
 
+keepAlive();
 client.login(process.env.BOT_TOKEN);
