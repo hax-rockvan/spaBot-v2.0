@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const dotenv = require('dotenv');
 dotenv.config();
 const PREFIX = process.env['PREFIX'];
-const BOT_TOKEN = process.env['TOKEN'];
+const BOT_TOKEN = process.env['BOT_TOKEN'];
 const keepAlive = require('server');
 
 const client = new Discord.Client();
@@ -23,7 +23,7 @@ for (const folder of commandFolders) {
 }
 
 client.once('ready', () => {
-  console.log('Ready!');
+  console.log('spaBot is Ready!');
 });
 
 client.on('message', (message) => {
