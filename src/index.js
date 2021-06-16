@@ -4,7 +4,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 const PREFIX = process.env['PREFIX'];
 const BOT_TOKEN = process.env['BOT_TOKEN'];
-const keepAlive = require('server');
 
 const client = new Discord.Client();
 
@@ -50,5 +49,4 @@ client.on('message', (message) => {
   }
 });
 
-keepAlive();
-client.login(process.env.BOT_TOKEN);
+client.login(BOT_TOKEN);
