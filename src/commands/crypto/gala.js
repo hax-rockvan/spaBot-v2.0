@@ -3,13 +3,13 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'gala',
-  description: 'Shows Current DPET to PHP Rate',
+  description: 'Shows Current GALA to PHP Rate',
 
   async execute(message, args) {
     fetch('https://api.coingecko.com/api/v3/coins/gala')
       .then((res) => res.json())
-      .then(async (dpetData) => {
-        const dpet = await dpetData;
+      .then(async (galaData) => {
+        const gala = await galaData;
 
         const galaEmbed = new Discord.MessageEmbed()
 
