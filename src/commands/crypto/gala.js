@@ -13,7 +13,7 @@ module.exports = {
 
         const galaEmbed = new Discord.MessageEmbed()
 
-          .setTitle(dpet.name)
+          .setTitle(gala.name)
           .setAuthor(
             'CoinGecko',
             'https://static.coingecko.com/s/thumbnail-007177f3eca19695592f0b8b0eabbdae282b54154e1be912285c9034ea6cbaf2.png'
