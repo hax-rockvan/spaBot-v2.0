@@ -19,8 +19,12 @@ module.exports = {
             '! + "ClassName" + "Part" (horn,mouth,back,tail) (ex. !birdhorn)',
         },
         {
-          name: 'Adventure Experience Guide',
-          value: '!exp',
+          name: 'Adventure Guide',
+          value: '!exp !levelguide',
+        },
+        {
+          name: 'PVP Guide',
+          value: '!mmr',
         },
         {
           name: 'Status Effects',
