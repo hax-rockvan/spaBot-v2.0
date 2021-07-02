@@ -11,6 +11,7 @@ module.exports = {
       .addFields(
         { name: 'Claim SLP', value: 'July 3, 11:37 PM' },
         { name: 'Claim SLP', value: 'July 4, 12:28 PM' },
+        { name: 'Iohannes', value: 'Borrowed 0.0023 WETH' },
         { name: 'Refresh Bot', value: 'July 7' }
       );
 
