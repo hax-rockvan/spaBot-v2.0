@@ -9,9 +9,8 @@ module.exports = {
       .setColor('#ffff3f')
       .setTitle('Important Reminder')
       .addFields(
-        { name: 'Claim SLP', value: 'July 3, 11:37 PM' },
-        { name: 'Claim SLP', value: 'July 4, 12:28 PM' },
         { name: 'Iohannes', value: 'Borrowed 0.0023 WETH' },
+        { name: 'Claim SLP', value: 'Jul 19th 2021, 12:23am' },
         { name: 'Refresh Bot', value: 'July 7' }
       );
 
