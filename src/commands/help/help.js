@@ -20,7 +20,7 @@ module.exports = {
         },
         {
           name: 'Adventure Guide',
-          value: '!exp !levelguide',
+          value: '!exp !levelguide !weakness',
         },
         {
           name: 'PVP Guide',
