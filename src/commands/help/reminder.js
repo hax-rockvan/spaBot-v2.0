@@ -10,10 +10,10 @@ module.exports = {
       .setTitle('Important Reminder')
       .addFields(
         { name: 'Iohannes', value: 'Borrowed 0.0023 WETH' },
+        { name: 'Rockvan', value: 'Borrowed 285.5205 BUSD' },
         { name: 'Imp', value: 'Pay 500php to Iohannes' },
         { name: 'Sexty', value: 'Pay 500php to Iohannes' },
-        { name: 'Claim SLP', value: 'Jul 19th 2021, 12:23am' },
-        { name: 'Refresh Bot', value: 'July 7' }
+        { name: 'SLP Claim Date', value: 'Aug 6th 2021, 10:01am' }
       );
 
     message.channel.send(reminder);
