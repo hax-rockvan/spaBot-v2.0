@@ -6,7 +6,7 @@ module.exports = {
   description: 'Shows Current BNB Rate',
 
   async execute(message, args) {
-    fetch('https://api.coingecko.com/api/v3/coins/binance-coin')
+    fetch('https://api.coingecko.com/api/v3/coins/binancecoin')
       .then((res) => res.json())
       .then(async (bnbData) => {
         const bnb = await bnbData;

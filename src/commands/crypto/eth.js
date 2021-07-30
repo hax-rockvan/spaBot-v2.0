@@ -6,7 +6,7 @@ module.exports = {
   description: 'Shows Current ETH Rate',
 
   async execute(message, args) {
-    fetch('https://api.coingecko.com/api/v3/coins/etherium')
+    fetch('https://api.coingecko.com/api/v3/coins/ethereum')
       .then((res) => res.json())
       .then(async (ethData) => {
         const eth = await ethData;

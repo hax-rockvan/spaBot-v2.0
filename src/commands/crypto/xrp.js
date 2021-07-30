@@ -6,7 +6,7 @@ module.exports = {
   description: 'Shows Current XRP Rate',
 
   async execute(message, args) {
-    fetch('https://api.coingecko.com/api/v3/coins/smooth-love-potion/')
+    fetch('https://api.coingecko.com/api/v3/coins/ripple')
       .then((res) => res.json())
       .then(async (xrpData) => {
         const xrp = await xrpData;
