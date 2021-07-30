@@ -19,7 +19,7 @@ module.exports = {
           )
           .setURL('https://www.coingecko.com/en/coins/cryptoblades')
           .setThumbnail(
-            'https://assets.coingecko.com/coins/images/14841/small/mist.jpg?1618629293'
+            'https://assets.coingecko.com/coins/images/825/small/binance-coin-logo.png?1547034615'
           )
           .setTimestamp()
           .setFooter('To The Moon!')
