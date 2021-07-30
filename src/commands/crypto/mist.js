@@ -30,12 +30,13 @@ module.exports = {
             Intl.NumberFormat('en-PH', {
               style: 'currency',
               currency: 'PHP',
-            }).format(mist.market_data.current_price.php)
+            }).format(mist.market_data.current_price.php),
+            true
           )
 
           .addField(
             'EURO',
-            Intl.NumberFormat('de-DE', {
+            Intl.NumberFormat('en-DE', {
               style: 'currency',
               currency: 'EUR',
             }).format(mist.market_data.current_price.eur),
