@@ -26,16 +26,25 @@ module.exports = {
           .setDescription('Current MIST to PHP Rate')
 
           .addField(
-            'MIST',
+            'PHP',
             Intl.NumberFormat('en-PH', {
               style: 'currency',
               currency: 'PHP',
             }).format(mist.market_data.current_price.php)
           )
+
+          .addField(
+            'EURO',
+            Intl.NumberFormat('de-DE', {
+              style: 'currency',
+              currency: 'EUR',
+            }).format(mist.market_data.current_price.eur),
+            true
+          )
+
           .addField(
             'Price Change Percentage 24h',
-            `${mist.market_data.price_change_percentage_24h_in_currency.php} %`,
-            true
+            `${mist.market_data.price_change_percentage_24h_in_currency.php} %`
           )
           .addField(
             '24h Low / 24h High',
