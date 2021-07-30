@@ -12,7 +12,6 @@ module.exports = {
         const eth = await ethData;
 
         const ethEmbed = new Discord.MessageEmbed()
-
           .setTitle(eth.name)
           .setAuthor(
             'CoinGecko',
@@ -48,6 +47,7 @@ module.exports = {
             'Price Change Percentage 24h',
             `${eth.market_data.price_change_percentage_24h_in_currency.php} %`
           )
+
           .addField(
             '24h Low / 24h High',
             `${Intl.NumberFormat('en-PH', {

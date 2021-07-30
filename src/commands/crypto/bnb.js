@@ -6,7 +6,7 @@ module.exports = {
   description: 'Shows Current BNB Rate',
 
   async execute(message, args) {
-    fetch('https://api.coingecko.com/api/v3/coins/binance-coin')
+    fetch('https://api.coingecko.com/api/v3/coins/mist')
       .then((res) => res.json())
       .then(async (bnbData) => {
         const bnb = await bnbData;
@@ -17,9 +17,9 @@ module.exports = {
             'CoinGecko',
             'https://static.coingecko.com/s/thumbnail-007177f3eca19695592f0b8b0eabbdae282b54154e1be912285c9034ea6cbaf2.png'
           )
-          .setURL('https://www.coingecko.com/en/coins/binance-coin')
+          .setURL('https://www.coingecko.com/en/coins/cryptoblades')
           .setThumbnail(
-            'hhttps://assets.coingecko.com/coins/images/825/small/binance-coin-logo.png?1547034615'
+            'https://assets.coingecko.com/coins/images/14841/small/mist.jpg?1618629293'
           )
           .setTimestamp()
           .setFooter('To The Moon!')
@@ -47,6 +47,7 @@ module.exports = {
             'Price Change Percentage 24h',
             `${bnb.market_data.price_change_percentage_24h_in_currency.php} %`
           )
+
           .addField(
             '24h Low / 24h High',
             `${Intl.NumberFormat('en-PH', {

@@ -45,7 +45,7 @@ module.exports = {
 
           .addField(
             'Price Change Percentage 24h',
-            `${skill.market_data.price_change_percentage_24h_in_currency.php} %`!
+            `${skill.market_data.price_change_percentage_24h_in_currency.php} %`
           )
           .addField(
             '24h Low / 24h High',
