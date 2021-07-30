@@ -32,7 +32,8 @@ module.exports = {
         },
         {
           name: 'Crypto Currency',
-          value: '!slp !axs !eth !usdt !busd',
+          value:
+            '!slp !axs !eth !usdt !busd !bnb !bmon !mist !skill !usdc !xrp',
         },
         {
           name: '!meme',
