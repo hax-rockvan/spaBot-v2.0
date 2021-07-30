@@ -6,7 +6,7 @@ module.exports = {
   description: 'Shows Current MIST to PHP Rate',
 
   async execute(message, args) {
-    fetch('https://api.coingecko.com/api/v3/coins/cryptoblades')
+    fetch('https://api.coingecko.com/api/v3/coins/mist')
       .then((res) => res.json())
       .then(async (mistData) => {
         const mist = await mistData;
@@ -19,7 +19,7 @@ module.exports = {
           )
           .setURL('https://www.coingecko.com/en/coins/cryptoblades')
           .setThumbnail(
-            'https://assets.coingecko.com/coins/images/15334/small/cryptoblade.PNG?1620596874'
+            'https://assets.coingecko.com/coins/images/14841/small/mist.jpg?1618629293'
           )
           .setTimestamp()
           .setFooter('To The Moon!')
@@ -30,8 +30,7 @@ module.exports = {
             Intl.NumberFormat('en-PH', {
               style: 'currency',
               currency: 'PHP',
-            }).format(mist.market_data.current_price.php),
-            true
+            }).format(mist.market_data.current_price.php)
           )
           .addField(
             'Price Change Percentage 24h',
