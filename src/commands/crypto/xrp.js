@@ -45,8 +45,7 @@ module.exports = {
 
           .addField(
             'Price Change Percentage 24h',
-            `${xrp.market_data.price_change_percentage_24h_in_currency.php} %`,
-            true
+            `${xrp.market_data.price_change_percentage_24h_in_currency.php} %`
           )
           .addField(
             '24h Low / 24h High',
