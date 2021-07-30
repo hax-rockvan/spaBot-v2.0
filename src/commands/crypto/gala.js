@@ -24,20 +24,29 @@ module.exports = {
           )
           .setTimestamp()
           .setFooter('To The Moon!')
-          .setDescription('Current GALA to PHP Rate')
+          .setDescription('Current GALA Rate')
 
           .addField(
-            'GALA',
+            'PHP',
             Intl.NumberFormat('en-PH', {
               style: 'currency',
               currency: 'PHP',
             }).format(gala.market_data.current_price.php),
             true
           )
+
+          .addField(
+            'EURO',
+            Intl.NumberFormat('en-DE', {
+              style: 'currency',
+              currency: 'EUR',
+            }).format(gala.market_data.current_price.eur),
+            true
+          )
+
           .addField(
             'Price Change Percentage 24h',
-            `${gala.market_data.price_change_percentage_24h_in_currency.php} %`,
-            true
+            `${gala.market_data.price_change_percentage_24h_in_currency.php} %`
           )
           .addField(
             '24h Low / 24h High',

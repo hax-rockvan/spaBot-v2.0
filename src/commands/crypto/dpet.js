@@ -24,20 +24,29 @@ module.exports = {
           )
           .setTimestamp()
           .setFooter('To The Moon!')
-          .setDescription('Current DPET to PHP Rate')
+          .setDescription('Current DPET Rate')
 
           .addField(
-            'DPET',
+            'PHP',
             Intl.NumberFormat('en-PH', {
               style: 'currency',
               currency: 'PHP',
             }).format(dpet.market_data.current_price.php),
             true
           )
+
+          .addField(
+            'EURO',
+            Intl.NumberFormat('en-DE', {
+              style: 'currency',
+              currency: 'EUR',
+            }).format(dpet.market_data.current_price.eur),
+            true
+          )
+
           .addField(
             'Price Change Percentage 24h',
-            `${dpet.market_data.price_change_percentage_24h_in_currency.php} %`,
-            true
+            `${dpet.market_data.price_change_percentage_24h_in_currency.php} %`
           )
           .addField(
             '24h Low / 24h High',

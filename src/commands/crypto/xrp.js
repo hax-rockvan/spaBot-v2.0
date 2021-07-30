@@ -23,16 +23,26 @@ module.exports = {
           )
           .setTimestamp()
           .setFooter('To The Moon!')
-          .setDescription('Current XRP to PHP Rate')
+          .setDescription('Current XRP Rate')
 
           .addField(
-            'XRP',
+            'PHP',
             Intl.NumberFormat('en-PH', {
               style: 'currency',
               currency: 'PHP',
             }).format(xrp.market_data.current_price.php),
             true
           )
+
+          .addField(
+            'EURO',
+            Intl.NumberFormat('en-DE', {
+              style: 'currency',
+              currency: 'EUR',
+            }).format(xrp.market_data.current_price.eur),
+            true
+          )
+
           .addField(
             'Price Change Percentage 24h',
             `${xrp.market_data.price_change_percentage_24h_in_currency.php} %`,

@@ -23,20 +23,29 @@ module.exports = {
           )
           .setTimestamp()
           .setFooter('To The Moon!')
-          .setDescription('Current USDC to PHP Rate')
+          .setDescription('Current USDC Rate')
 
           .addField(
-            'USDC',
+            'PHP',
             Intl.NumberFormat('en-PH', {
               style: 'currency',
               currency: 'PHP',
             }).format(usdc.market_data.current_price.php),
             true
           )
+
+          .addField(
+            'EURO',
+            Intl.NumberFormat('en-DE', {
+              style: 'currency',
+              currency: 'EUR',
+            }).format(usdc.market_data.current_price.eur),
+            true
+          )
+
           .addField(
             'Price Change Percentage 24h',
-            `${usdc.market_data.price_change_percentage_24h_in_currency.php} %`,
-            true
+            `${usdc.market_data.price_change_percentage_24h_in_currency.php} %`
           )
           .addField(
             '24h Low / 24h High',

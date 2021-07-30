@@ -23,20 +23,29 @@ module.exports = {
           )
           .setTimestamp()
           .setFooter('To The Moon!')
-          .setDescription('Current SLP to PHP Rate')
+          .setDescription('Current SLP Rate')
 
           .addField(
-            'SLP',
+            'PHP',
             Intl.NumberFormat('en-PH', {
               style: 'currency',
               currency: 'PHP',
             }).format(slp.market_data.current_price.php),
             true
           )
+
+          .addField(
+            'EURO',
+            Intl.NumberFormat('en-DE', {
+              style: 'currency',
+              currency: 'EUR',
+            }).format(slp.market_data.current_price.eur),
+            true
+          )
+
           .addField(
             'Price Change Percentage 24h',
-            `${slp.market_data.price_change_percentage_24h_in_currency.php} %`,
-            true
+            `${slp.market_data.price_change_percentage_24h_in_currency.php} %`
           )
           .addField(
             '24h Low / 24h High',

@@ -24,21 +24,31 @@ module.exports = {
           )
           .setTimestamp()
           .setFooter('To The Moon!')
-          .setDescription('Current AXS to PHP Rate')
+          .setDescription('Current AXS Rate')
 
           .addField(
-            'AXS',
+            'PHP',
             Intl.NumberFormat('en-PH', {
               style: 'currency',
               currency: 'PHP',
             }).format(axs.market_data.current_price.php),
             true
           )
+
           .addField(
-            'Price Change Percentage 24h',
-            `${axs.market_data.price_change_percentage_24h_in_currency.php} %`,
+            'EURO',
+            Intl.NumberFormat('en-DE', {
+              style: 'currency',
+              currency: 'EUR',
+            }).format(axs.market_data.current_price.eur),
             true
           )
+
+          .addField(
+            'Price Change Percentage 24h',
+            `${axs.market_data.price_change_percentage_24h_in_currency.php} %`
+          )
+
           .addField(
             '24h Low / 24h High',
             `${Intl.NumberFormat('en-PH', {

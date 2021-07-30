@@ -23,16 +23,26 @@ module.exports = {
           )
           .setTimestamp()
           .setFooter('To The Moon!')
-          .setDescription('Current SKILL to PHP Rate')
+          .setDescription('Current SKILL Rate')
 
           .addField(
-            'SKILL',
+            'PHP',
             Intl.NumberFormat('en-PH', {
               style: 'currency',
               currency: 'PHP',
             }).format(skill.market_data.current_price.php),
             true
           )
+
+          .addField(
+            'EURO',
+            Intl.NumberFormat('en-DE', {
+              style: 'currency',
+              currency: 'EUR',
+            }).format(skill.market_data.current_price.eur),
+            true
+          )
+
           .addField(
             'Price Change Percentage 24h',
             `${skill.market_data.price_change_percentage_24h_in_currency.php} %`,

@@ -23,7 +23,7 @@ module.exports = {
           )
           .setTimestamp()
           .setFooter('To The Moon!')
-          .setDescription('Current MIST to PHP Rate')
+          .setDescription('Current MIST Rate')
 
           .addField(
             'PHP',
@@ -47,6 +47,7 @@ module.exports = {
             'Price Change Percentage 24h',
             `${mist.market_data.price_change_percentage_24h_in_currency.php} %`
           )
+
           .addField(
             '24h Low / 24h High',
             `${Intl.NumberFormat('en-PH', {
