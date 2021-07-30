@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'xrp',
-  description: 'Shows Current XRP to PHP Rate',
+  description: 'Shows Current XRP Rate',
 
   async execute(message, args) {
     fetch('https://api.coingecko.com/api/v3/coins/smooth-love-potion/')

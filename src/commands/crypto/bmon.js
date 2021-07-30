@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'bmon',
-  description: 'Shows Current BMON to PHP Rate',
+  description: 'Shows Current BMON Rate',
 
   async execute(message, args) {
     fetch('https://api.coingecko.com/api/v3/coins/binamon')
@@ -23,7 +23,7 @@ module.exports = {
           )
           .setTimestamp()
           .setFooter('To The Moon!')
-          .setDescription('Current BMON to PHP Rate')
+          .setDescription('Current BMON Rate')
 
           .addField(
             'PHP',

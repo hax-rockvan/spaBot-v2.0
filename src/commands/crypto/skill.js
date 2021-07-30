@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'skill',
-  description: 'Shows Current SKILL to PHP Rate',
+  description: 'Shows Current SKILL Rate',
 
   async execute(message, args) {
     fetch('https://api.coingecko.com/api/v3/coins/cryptoblades')
@@ -45,8 +45,7 @@ module.exports = {
 
           .addField(
             'Price Change Percentage 24h',
-            `${skill.market_data.price_change_percentage_24h_in_currency.php} %`,
-            true
+            `${skill.market_data.price_change_percentage_24h_in_currency.php} %`!
           )
           .addField(
             '24h Low / 24h High',

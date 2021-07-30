@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'bnb',
-  description: 'Shows Current BNB to PHP Rate',
+  description: 'Shows Current BNB Rate',
 
   async execute(message, args) {
     fetch('https://api.coingecko.com/api/v3/coins/binance-coin')
@@ -23,7 +23,7 @@ module.exports = {
           )
           .setTimestamp()
           .setFooter('To The Moon!')
-          .setDescription('Current BNB to PHP Rate')
+          .setDescription('Current BNB Rate')
 
           .addField(
             'PHP',

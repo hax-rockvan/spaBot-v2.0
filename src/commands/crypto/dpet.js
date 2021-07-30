@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'dpet',
-  description: 'Shows Current DPET to PHP Rate',
+  description: 'Shows Current DPET Rate',
 
   async execute(message, args) {
     fetch('https://api.coingecko.com/api/v3/coins/my-defi-pet')

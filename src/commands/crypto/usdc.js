@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'usdc',
-  description: 'Shows Current USDC to PHP Rate',
+  description: 'Shows Current USDC Rate',
 
   async execute(message, args) {
     fetch('https://api.coingecko.com/api/v3/coins/usd-coin')

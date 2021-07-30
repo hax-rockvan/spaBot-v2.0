@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'busd',
-  description: 'Shows Current BUSD to PHP Rate',
+  description: 'Shows Current BUSD Rate',
 
   async execute(message, args) {
     fetch('https://api.coingecko.com/api/v3/coins/binance-usd/')

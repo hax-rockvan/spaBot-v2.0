@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'gala',
-  description: 'Shows Current GALA to PHP Rate',
+  description: 'Shows Current GALA Rate',
 
   async execute(message, args) {
     fetch('https://api.coingecko.com/api/v3/coins/gala')

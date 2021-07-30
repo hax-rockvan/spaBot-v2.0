@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'slp',
-  description: 'Shows Current SLP to PHP Rate',
+  description: 'Shows Current SLP Rate',
 
   async execute(message, args) {
     fetch('https://api.coingecko.com/api/v3/coins/smooth-love-potion/')

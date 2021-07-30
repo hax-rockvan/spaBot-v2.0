@@ -3,10 +3,10 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'eth',
-  description: 'Shows Current ETH to PHP Rate',
+  description: 'Shows Current ETH Rate',
 
   async execute(message, args) {
-    fetch('https://api.coingecko.com/api/v3/coins/ethereum')
+    fetch('https://api.coingecko.com/api/v3/coins/etherium')
       .then((res) => res.json())
       .then(async (ethData) => {
         const eth = await ethData;
@@ -31,7 +31,7 @@ module.exports = {
             Intl.NumberFormat('en-PH', {
               style: 'currency',
               currency: 'PHP',
-            }).format(busd.market_data.current_price.php),
+            }).format(eth.market_data.current_price.php),
             true
           )
 
@@ -40,7 +40,7 @@ module.exports = {
             Intl.NumberFormat('en-DE', {
               style: 'currency',
               currency: 'EUR',
-            }).format(busd.market_data.current_price.eur),
+            }).format(eth.market_data.current_price.eur),
             true
           )
 

@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'axs',
-  description: 'Shows Current ETH to PHP Rate',
+  description: 'Shows Current ETH Rate',
 
   async execute(message, args) {
     fetch('https://api.coingecko.com/api/v3/coins/axie-infinity')

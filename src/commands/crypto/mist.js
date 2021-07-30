@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
   name: 'mist',
-  description: 'Shows Current MIST to PHP Rate',
+  description: 'Shows Current MIST Rate',
 
   async execute(message, args) {
     fetch('https://api.coingecko.com/api/v3/coins/mist')
